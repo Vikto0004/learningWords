@@ -1,0 +1,30 @@
+.wrap-title {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 45px;
+}
+
+.btn-create {
+  border: #d2382c 1px solid;
+  color: #d2382c;
+  background-color: transparent;
+  padding: 0;
+  width: 70px;
+  height: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.btn-create:hover {
+  border: #fa0909 1px solid;
+  color: #fa0909;
+}
+
+.title {
+  color: #ffff;
+}
+
+.title span {
+  color: #d2382c;
+}
