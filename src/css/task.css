@@ -66,11 +66,12 @@
   display: flex;
   flex-direction: column;
   width: 700px;
-  height: 320px;
+  height: 350px;
   padding: 20px;
   border-radius: 10px;
   margin: 0 auto 50px;
-  border: 1px #d2382c solid;
+  border: 1px transparent solid;
+  transition: all 0.4s ease;
 }
 
 .task-wrap-top {
@@ -117,28 +118,21 @@
 
 .task-list-item {
   width: 200px;
-  border: 1px #646464 solid;
-  padding: 10px 0;
-  border-radius: 10px;
-  cursor: pointer;
-  color: #949494;
+  height: 46px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.task-list-item:hover {
-  border: 1px #959595 solid;
-}
-
-.task-list-item-active {
-  border: 1px #d2382c solid;
-  color: #d2382c;
-}
-
-.task-list-item-active:hover {
-  border: 1px #b53128 solid;
-  color: #b53128;
+.task-list-item-btn {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  color: #949494;
+  border: 1px #646464 solid;
+  border-radius: 10px;
+  transition: all 0.4s ease;
 }
 
 .task-text-know {
@@ -146,8 +140,36 @@
   color: #8d8d8d;
   cursor: pointer;
   transition: color 0.4s ease;
+  padding: 5px;
+  border-radius: 6px;
+  background: transparent;
+  border: none;
 }
 
 .task-text-know:hover {
   color: #b8b8b8;
+}
+
+.task-list-item-btn:hover {
+  border: 1px #959595 solid;
+}
+
+.task-list-item-false {
+  border: 1px #d2382c solid;
+  color: #d2382c;
+}
+
+.task-list-item-false:hover {
+  border: 1px #b53128 solid;
+  color: #b53128;
+}
+
+.task-list-item-true {
+  border: 1px #38b000 solid;
+  color: #38b000;
+}
+
+.task-list-item-true:hover {
+  border: 1px #309004 solid;
+  color: #309004;
 }
