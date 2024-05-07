@@ -1,0 +1,150 @@
+.qustione-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border: 1px rgba(255, 249, 178, 0.9) solid;
+  padding: 15px 10px;
+  background-color: #262626;
+  width: 430px;
+  column-gap: 10px;
+  z-index: 999;
+}
+
+.qustione-wrap-title {
+  width: 100%;
+  color: #fff;
+  height: 22px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.qustione-wrap-title span {
+  color: rgba(255, 249, 178, 0.9);
+}
+
+/* --- Drop list --- */
+
+.drop-warp {
+  background-color: transparent;
+  border-radius: 10px;
+  width: 145px;
+}
+
+.drop-warp div {
+  background: transparent;
+  padding: 0px;
+  height: auto;
+  border: none;
+}
+
+.ui-accordion .ui-accordion-content {
+  padding: 0px;
+  height: auto;
+}
+
+.drop-warp button {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: #fff;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.ui-accordion .ui-accordion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.drop-warp-choose {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: #fff;
+  padding: 8px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: transform 0.5s ease;
+  height: 34px;
+}
+
+.drop-warp-choose:hover {
+  background-color: #535356;
+}
+
+.drop-warp-icon {
+  width: 15px;
+  height: 15px;
+  fill: rgba(255, 249, 178, 0.9);
+  transition: transform 0.5s ease;
+}
+
+.drop-warp-icon-active {
+  transform: rotate(90deg);
+}
+
+.drop-warp button:hover {
+  background-color: #535356;
+}
+
+.drop-list {
+  border-radius: 10px;
+  border: 1px rgba(255, 249, 178, 0.9) solid;
+}
+
+/* --- Qust res wrap ---*/
+
+.qust-res-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.qust-res-wrap div {
+  display: flex;
+  gap: 10px;
+}
+
+.qust-res-wrap div p {
+  color: #ededed;
+}
+
+.qust-res-icon-btn {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.qust-res-icon {
+  fill: #ededed;
+  cursor: pointer;
+}
+
+.qust-res-icon:hover {
+  fill: #cbcbcb;
+}
+
+.qust-btn-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.qust-btn-wrap button:first-child {
+  --color: #d2382c;
+  padding: 6px 10px;
+}
+
+.qust-btn-wrap button:last-child {
+  --color: #38b000;
+  padding: 6px 13px;
+}

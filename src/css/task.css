@@ -1,0 +1,153 @@
+.is-open {
+  display: block;
+  opacity: 1;
+}
+
+.task {
+  background-color: #1f1f1f;
+  padding-top: 65px;
+  position: absolute;
+}
+
+.task-header {
+  display: flex;
+  padding: 15px 50px;
+  justify-content: space-between;
+  background-color: #1e1e28;
+  align-items: center;
+  flex-wrap: wrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 13;
+}
+
+.task-header-btn {
+  --color: #d2382c;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 35px;
+}
+
+.task-header-btn svg {
+  stroke: transparent;
+  fill: currentColor;
+}
+
+.task-header-line {
+  width: 40%;
+  height: 1.5px;
+  background: #d2382c;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.task-header-title {
+  color: #cbcbcb;
+}
+
+.task-header-text {
+  color: #cbcbcb;
+}
+
+.taskes-container {
+  padding-top: 35px;
+  height: 100%;
+  overflow: auto;
+}
+
+.task-wrap {
+  background-color: #1e1e28;
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  height: 320px;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 0 auto 50px;
+  border: 1px #d2382c solid;
+}
+
+.task-wrap-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.task-wrap-top-val {
+  color: #cbcbcb;
+  opacity: 0.5;
+}
+
+.task-wrap-top-count {
+  color: #cbcbcb;
+  opacity: 0.5;
+}
+
+.task-wrap-word {
+  font-size: 24px;
+  color: #cbcbcb;
+  margin-bottom: 15px;
+}
+
+.task-wrap-text {
+  text-align: center;
+  color: #cbcbcb;
+  margin-bottom: 20px;
+}
+
+.task-wrap-text span {
+  color: #d2382c;
+}
+
+.task-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  column-gap: 50px;
+  row-gap: 25px;
+  margin-bottom: 20px;
+}
+
+.task-list-item {
+  width: 200px;
+  border: 1px #646464 solid;
+  padding: 10px 0;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #949494;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.task-list-item:hover {
+  border: 1px #959595 solid;
+}
+
+.task-list-item-active {
+  border: 1px #d2382c solid;
+  color: #d2382c;
+}
+
+.task-list-item-active:hover {
+  border: 1px #b53128 solid;
+  color: #b53128;
+}
+
+.task-text-know {
+  margin: 0 auto;
+  color: #8d8d8d;
+  cursor: pointer;
+  transition: color 0.4s ease;
+}
+
+.task-text-know:hover {
+  color: #b8b8b8;
+}

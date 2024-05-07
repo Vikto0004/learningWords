@@ -1,12 +1,15 @@
-/**
+/*
   |============================
   | include css partials with
   | default @import url()
   |============================
 */
+
 @import url('./reset.css');
-@import url('./index.css');
 @import url('./titular.css');
+@import url('./model-create.css');
+@import url('./settings-opt-task.css');
+@import url('./task.css');
 
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
