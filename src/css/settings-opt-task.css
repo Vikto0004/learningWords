@@ -10,7 +10,8 @@
   border: 1px rgba(255, 249, 178, 0.9) solid;
   padding: 15px 10px;
   background-color: #262626;
-  width: 430px;
+  max-width: 430px;
+  min-width: 230px;
   column-gap: 10px;
   z-index: 999;
 }

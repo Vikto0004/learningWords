@@ -3,7 +3,6 @@ import 'izitoast/dist/css/iziToast.min.css';
 
 const elBtnCreateOpen = document.querySelector('.btn-create');
 const elBtnCreateClose = document.querySelector('.model-create-close');
-const elCreateContainer = document.querySelector('.model-create-container');
 const elWordCounter = document.querySelector('#wordCounter');
 const elTitleTask = document.querySelector('#titleTask');
 const elModelCreateList = document.querySelector('.model-create-list');
@@ -14,9 +13,9 @@ const elContainerTask = document.querySelector('.task-container');
 const elWrapTaskTitle = document.querySelector('.task-title');
 const elWordCounterTask = document.querySelectorAll('#wordCounterTask');
 
-const elDropWarp = document.querySelector('.drop-warp');
 const elBackgropCreate = document.querySelector('.js-backgrop-model-create');
 const elBackgropQustione = document.querySelector('.js-backgrop-qustione');
+const elBackgropTask = document.querySelector('.task');
 
 const qustWrap = {
   elWrap: document.querySelector('.qustione-wrap'),
@@ -28,9 +27,11 @@ const qustWrap = {
   langRes: document.querySelector('.res-lang'),
 };
 
+const elTaskesContainer = document.querySelector('.taskes-container');
+
 const optionsTask = {
   mode: 'Choose word',
-  lang: 'Ukraine',
+  lang: 'ukrWord',
 };
 
 elBtnCreateOpen.addEventListener('click', () => {
@@ -115,7 +116,7 @@ elModelCreateForm.addEventListener('submit', event => {
   });
   elTitleTask.value = '';
   elModelCreateForm.reset();
-  elCreateContainer.classList.remove('is-open');
+  elBackgropCreate.classList.remove('is-open');
 });
 
 //* Return string wrap task
@@ -175,6 +176,7 @@ elWrapTaskes.addEventListener('click', event => {
         optionsTask.title = wrapTitle;
         optionsTask.ukrWord = ukrWord;
         optionsTask.englWord = englWord;
+        optionsTask.number = englWord.length;
         return;
       }
     });
@@ -204,10 +206,13 @@ qustWrap.elWrap.addEventListener('click', event => {
   } else if (elTarget.textContent === 'Mixed') {
     awardingAndClose('Mixed');
     return;
+  } else if (elTarget.textContent === 'Go') {
+    startingTask();
+    return;
   }
 
-  //* Choose lang of/on
   if (elTarget.closest('.qust-res-icon-btn')) {
+    //* Choose lang of/on
     const langOfText = qustWrap.langOf.textContent;
     const langOnText = qustWrap.langOn.textContent;
     optionsTask.lang = langOfText;
@@ -218,3 +223,68 @@ qustWrap.elWrap.addEventListener('click', event => {
     return;
   }
 });
+
+function startingTask() {
+  elBackgropTask.classList.add('is-open');
+
+  const { number, lang, mode, ukrWord, englWord, title } = optionsTask;
+
+  let language = '';
+  if (lang === 'ukrWord') language = 'englWord';
+  else language = 'ukrWord';
+
+  if (mode === 'Choose word') {
+    let markup = '';
+    let counter = 0;
+    const shuffledArr = shuffleArray(optionsTask[lang]);
+
+    for (const word of shuffledArr) {
+      const indexTrue = optionsTask[lang].indexOf(word);
+      const ofNumb = String(++counter).padStart(2, '0');
+      const onNumb = String(number).padStart(2, '0');
+
+      markup += `<div class="task-wrap">
+        <div class="task-wrap-top">
+          <p class="task-wrap-top-val">Value</p>
+          <p class="task-wrap-top-count">${ofNumb} / ${onNumb}</p>
+        </div>
+        <p class="task-wrap-word">${word}</p>
+        <p class="task-wrap-text">Choose <span>the</span> appropriate term</p>
+        <ul class="task-list">
+        ${mixingItem(optionsTask[language], indexTrue)}
+        </ul>
+        <p class="task-text-know">I don't know</p>
+      </div>`;
+    }
+    elTaskesContainer.innerHTML = markup;
+  }
+}
+
+//* Shuffling array
+function shuffleArray(array) {
+  const newArr = [...array];
+  for (let i = newArr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [newArr[i], newArr[j]] = [newArr[j], newArr[i]];
+  }
+  return newArr;
+}
+
+//* Created elements to "task-list"
+function mixingItem(array, indexTrue) {
+  const trueWord = array[indexTrue];
+  const trueItem = `<li class="task-list-item">${trueWord}</li>`;
+  const shuffleArr = shuffleArray(array);
+  const arrMarkup = [];
+
+  let countet = 0;
+  for (const word of shuffleArr) {
+    if (countet === 3) break;
+    else if (word !== trueWord) {
+      arrMarkup.push(`<li class="task-list-item">${word}</li>`);
+      countet++;
+    }
+  }
+  arrMarkup.push(trueItem);
+  return shuffleArray(arrMarkup).join('');
+}
