@@ -1,0 +1,55 @@
+<div class="backgrop js-backgrop-model-create">
+  <div class="model-create-container">
+    <button class="model-create-close" type="button">X</button>
+    <form class="model-create-form-number">
+      <div>
+        <label for="titleTask">Title:</label>
+        <input type="text" name="titleTask" id="titleTask" />
+      </div>
+      <div>
+        <label for="wordCounter">Word counter:</label>
+        <input
+          type="number"
+          value="2"
+          min="2"
+          max="25"
+          name="wordCounter"
+          id="wordCounter"
+        />
+      </div>
+    </form>
+    <div class="model-create-wrap">
+      <p>English : Ukrain</p>
+      <p>English : Ukrain</p>
+    </div>
+    <form class="model-create-form">
+      <ul class="model-create-list">
+        <li>
+          <input type="text" name="engl" required /><input
+            type="text"
+            name="ukr"
+            required
+          />
+        </li>
+        <li>
+          <input type="text" name="engl" required /><input
+            type="text"
+            name="ukr"
+            required
+          />
+        </li>
+      </ul>
+      <button class="model-create-save" type="submit">Save</button>
+    </form>
+  </div>
+</div>
+<div class="task-container task-hiden">
+  <button class="task-delete-btn" type="button">Delete</button>
+  <h3 class="task-title">Title</h3>
+  <p>Word count: <span id="wordCounterTask">00</span></p>
+  <p>
+    Progress: <span id="wordProgress">00</span> /
+    <span id="wordCounterTask">00</span>
+  </p>
+  <button class="task-start-btn animate-btn" type="button">Start</button>
+</div>

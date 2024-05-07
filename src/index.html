@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>Learning Words</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
@@ -17,110 +17,9 @@
   </head>
   <body>
     <load src="partials/titular.html" />
-    <div class="backgrop js-backgrop-model-create">
-      <div class="model-create-container">
-        <button class="model-create-close" type="button">X</button>
-        <form class="model-create-form-number">
-          <div>
-            <label for="titleTask">Title:</label>
-            <input type="text" name="titleTask" id="titleTask" />
-          </div>
-          <div>
-            <label for="wordCounter">Word counter:</label>
-            <input
-              type="number"
-              value="2"
-              min="2"
-              max="25"
-              name="wordCounter"
-              id="wordCounter"
-            />
-          </div>
-        </form>
-        <div class="model-create-wrap">
-          <p>English : Ukrain</p>
-          <p>English : Ukrain</p>
-        </div>
-        <form class="model-create-form">
-          <ul class="model-create-list">
-            <li>
-              <input type="text" name="engl" required /><input
-                type="text"
-                name="ukr"
-                required
-              />
-            </li>
-            <li>
-              <input type="text" name="engl" required /><input
-                type="text"
-                name="ukr"
-                required
-              />
-            </li>
-          </ul>
-          <button class="model-create-save" type="submit">Save</button>
-        </form>
-      </div>
-    </div>
+    <load src="partials/model-create.html" />
+    <load src="partials/settings-opt-task.html" />
 
-    <div class="task-container task-hiden">
-      <button class="task-delete-btn" type="button">Delete</button>
-      <h3 class="task-title">Title</h3>
-      <p>Word count: <span id="wordCounterTask">00</span></p>
-      <p>
-        Progress: <span id="wordProgress">00</span> /
-        <span id="wordCounterTask">00</span>
-      </p>
-      <button class="task-start-btn animate-btn" type="button">Start</button>
-    </div>
-
-    <div class="backgrop js-backgrop-qustione">
-      <div class="qustione-wrap">
-        <h3 class="qustione-wrap-title">
-          How you want <span>pass the</span> task?
-        </h3>
-        <div class="drop-warp" id="accordion">
-          <h3 class="drop-warp-choose">
-            <span>Choose word</span>
-            <svg class="drop-warp-icon">
-              <use href="./img/sprite.svg#icon-circle-right"></use>
-            </svg>
-          </h3>
-          <div>
-            <ul class="drop-list">
-              <li>
-                <button type="button" data-drop="choose">Choose word</button>
-              </li>
-              <li>
-                <button type="button" data-drop="enter">Enter word</button>
-              </li>
-              <li><button type="button" data-drop="mixed">Mixed</button></li>
-            </ul>
-          </div>
-        </div>
-        <div class="qust-res-wrap">
-          <div>
-            <p class="choose-lang-of">English</p>
-            <button class="qust-res-icon-btn" type="button">
-              <svg class="qust-res-icon" width="30px" height="15px">
-                <use href="./img/sprite.svg#icon-loop"></use>
-              </svg>
-            </button>
-            <p class="choose-lang-on">Ukraine</p>
-          </div>
-          <div>
-            <p class="comes-choose">Choose word:</p>
-            <p class="res-lang">Ukraine</p>
-          </div>
-        </div>
-        <div class="qust-btn-wrap">
-          <button class="animate-btn" type="button" data-drop="back">
-            Exit
-          </button>
-          <button class="animate-btn" type="button" data-drop="yes">Go</button>
-        </div>
-      </div>
-    </div>
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
     <script type="module" src="./main.js"></script>
