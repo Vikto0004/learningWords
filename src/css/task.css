@@ -39,12 +39,12 @@
 }
 
 .task-header-line {
-  width: 40%;
   height: 1.5px;
   background: #d2382c;
   position: absolute;
   bottom: 0;
   left: 0;
+  transition: all 2s ease;
 }
 
 .task-header-title {

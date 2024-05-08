@@ -131,13 +131,10 @@ function addingWrapTask(title, wordCounter) {
 //* Adding all wrap task
 const getSaveWord = JSON.parse(localStorage.getItem('saveWordLocal')) || [];
 if (getSaveWord.length) {
-  const taskWrapAll = getSaveWord
-    .map(({ title, Ukraine }) => {
-      return addingWrapTask(title, String(Ukraine.length).padStart(2, '0'));
-    })
-    .join('');
-
-  elWrapTaskes.innerHTML = taskWrapAll;
+  const taskWrapAll = getSaveWord.map(({ title, Ukraine }) => {
+    return addingWrapTask(title, String(Ukraine.length).padStart(2, '0'));
+  });
+  elWrapTaskes.innerHTML = taskWrapAll.join('');
 }
 
 elWrapTaskes.addEventListener('click', event => {
@@ -223,3 +220,19 @@ qustWrap.elWrap.addEventListener('click', event => {
     localStorage.setItem('currentSaveTask', JSON.stringify(optionsTask));
   }
 });
+
+function updProgress() {
+  const elWrdProgress = document.querySelectorAll('#wordProgress');
+  const getSaveWord = JSON.parse(localStorage.getItem('saveWordLocal'));
+
+  elWrdProgress.forEach(el => {
+    const elTitleTask = el
+      .closest('.task-container')
+      .querySelector('.task-title');
+    getSaveWord.forEach(({ title, choose }) => {
+      if (elTitleTask.textContent !== title || !choose) return;
+      el.textContent = String(choose.true).padStart(2, '0');
+    });
+  });
+}
+updProgress();

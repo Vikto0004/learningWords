@@ -2,6 +2,11 @@ import { elBackgropTask } from './create-word-task';
 import { elTaskesContainer } from './create-word-task';
 
 const elQustioneWrap = document.querySelector('.qustione-wrap');
+const elHeaderCount = document.querySelector('.task-header-text');
+const elHeaderLine = document.querySelector('.task-header-line');
+
+let counterNumber = 0;
+let chooseTrue = 0;
 
 elQustioneWrap.addEventListener('click', event => {
   if (event.target.textContent === 'Go') {
@@ -11,9 +16,12 @@ elQustioneWrap.addEventListener('click', event => {
 
 function startingTask() {
   elBackgropTask.classList.add('is-open');
-
+  const elTaskHeaderTitle = document.querySelector('.task-header-title');
   const optionsTask = JSON.parse(localStorage.getItem('currentSaveTask'));
   const { number, lang, mode, Ukraine, English, title } = optionsTask;
+
+  elHeaderCount.textContent = `00 / ${String(number).padStart(2, '0')}`;
+  elTaskHeaderTitle.textContent = title;
 
   let language = '';
   if (lang === 'Ukraine') language = 'English';
@@ -100,6 +108,7 @@ elTaskesContainer.addEventListener('click', event => {
   const chooseIndex = optionsTask[language].indexOf(chooseWord);
 
   if (trueIndex === chooseIndex) {
+    ++chooseTrue;
     elTarget.classList.add('task-list-item-true');
     elTaskWrap.classList.add('task-list-item-true');
     setTimeout(scrollNext, 1000);
@@ -115,7 +124,25 @@ elTaskesContainer.addEventListener('click', event => {
 
   chooseWordAll.forEach(el => (el.disabled = true));
   function scrollNext() {
+    const contNumb = String(++counterNumber).padStart(2, '0');
+    const numb = String(number).padStart(2, '0');
+
+    elHeaderCount.textContent = `${contNumb} / ${numb}`;
     elBtnNotKnow.disabled = true;
+
+    if (counterNumber === number) {
+      const getSaveWord = JSON.parse(localStorage.getItem('saveWordLocal'));
+      getSaveWord.forEach(obj => {
+        if (obj.title === optionsTask.title) {
+          obj.choose = { true: chooseTrue, false: number - chooseTrue };
+          return;
+        }
+      });
+      localStorage.setItem('saveWordLocal', JSON.stringify(getSaveWord));
+    }
+
+    const lengthInPercent = ((counterNumber / number) * 100).toFixed(2);
+    elHeaderLine.style.width = `${lengthInPercent}%`;
     if (!elTaskWrapNext) return;
     elTaskWrapNext.scrollIntoView({
       behavior: 'smooth',
