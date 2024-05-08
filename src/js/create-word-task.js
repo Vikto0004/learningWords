@@ -9,8 +9,6 @@ const elModelCreateList = document.querySelector('.model-create-list');
 const elModelCreateForm = document.querySelector('.model-create-form');
 
 const elWrapTaskes = document.querySelector('.wrap-taskes');
-const elContainerTask = document.querySelector('.task-container');
-const elWrapTaskTitle = document.querySelector('.task-title');
 const elWordCounterTask = document.querySelectorAll('#wordCounterTask');
 
 const elBackgropCreate = document.querySelector('.js-backgrop-model-create');
@@ -35,6 +33,7 @@ const optionsTask = {
 };
 export { elTaskesContainer };
 export { elBackgropTask };
+export { updProgress };
 
 elBtnCreateOpen.addEventListener('click', () => {
   elBackgropCreate.classList.add('is-open');
@@ -119,13 +118,21 @@ elModelCreateForm.addEventListener('submit', event => {
   elTitleTask.value = '';
   elModelCreateForm.reset();
   elBackgropCreate.classList.remove('is-open');
+  updProgress();
 });
 
 //* Return string wrap task
 function addingWrapTask(title, wordCounter) {
-  elWrapTaskTitle.textContent = title;
   elWordCounterTask.forEach(el => (el.textContent = wordCounter));
-  return `<div class="task-container">${elContainerTask.innerHTML}</div>`;
+  return `<div class="task-container"> 
+  <button class="task-delete-btn" type="button">Delete</button>
+  <h3 class="task-title">${title}</h3>
+  <p>Word count: <span id="wordCounterTask">${wordCounter}</span></p>
+  <p>
+    Progress: <span id="wordProgress">00</span> /
+    <span id="wordCounterTask">${wordCounter}</span>
+  </p>
+  <button class="task-start-btn animate-btn" type="button">Start</button></div>`;
 }
 
 //* Adding all wrap task
