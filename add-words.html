@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/learningWords/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WordMaster</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css"
+  />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+
+  
+  <link rel="stylesheet" href="/learningWords/assets/styles-fbe71d89.css">
+</head>
+
+  <body>
+    <div class="container">
+  <header
+    class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom"
+  >
+    <a
+      href="/"
+      class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
+    >
+      <svg class="bi me-2" width="40" height="32">
+        <use href="/learningWords/assets/sprite-502c4a01.svg#icon-letter-w"></use>
+      </svg>
+      <span class="fs-4">WordMaster</span>
+    </a>
+
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a href="/" class="nav-link active" aria-current="page">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="/add-words.html" class="nav-link">Add words</a>
+      </li>
+      <li class="nav-item">
+        <a href="/my-cards.html" class="nav-link">My cards</a>
+      </li>
+      <li class="nav-item">
+        <a href="/settings.html" class="nav-link">Settings</a>
+      </li>
+    </ul>
+  </header>
+</div>
+
+    <div class="backgrop js-backgrop-model-create">
+  <div class="model-create-container">
+    <button class="model-create-close" type="button">X</button>
+    <form class="model-create-form-number">
+      <div>
+        <label for="titleTask">Title:</label>
+        <input type="text" name="titleTask" id="titleTask" />
+      </div>
+      <div>
+        <label for="wordCounter">Word counter:</label>
+        <input
+          type="number"
+          value="2"
+          min="2"
+          max="25"
+          name="wordCounter"
+          id="wordCounter"
+        />
+      </div>
+    </form>
+    <div class="model-create-wrap">
+      <p>English : Ukrain</p>
+      <p>English : Ukrain</p>
+    </div>
+    <form class="model-create-form">
+      <ul class="model-create-list">
+        <li>
+          <input type="text" name="engl" required /><input
+            type="text"
+            name="ukr"
+            required
+          />
+        </li>
+        <li>
+          <input type="text" name="engl" required /><input
+            type="text"
+            name="ukr"
+            required
+          />
+        </li>
+      </ul>
+      <button class="model-create-save" type="submit">Save</button>
+    </form>
+  </div>
+</div>
+
+    <div class="container">
+  <footer
+    class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
+  >
+    <p class="col-md-4 mb-0 text-body-secondary">© 2024 Company, Inc</p>
+
+    <a
+      href="/"
+      class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
+    >
+      <svg class="bi me-2" width="40" height="32">
+        <use href="/learningWords/assets/sprite-502c4a01.svg#icon-letter-w"></use>
+      </svg>
+    </a>
+
+    <ul class="nav col-md-4 justify-content-end">
+      <li class="nav-item">
+        <a href="/" class="nav-link px-2 text-body-secondary">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="/add-words.html" class="nav-link px-2 text-body-secondary"
+          >Add words</a
+        >
+      </li>
+      <li class="nav-item">
+        <a href="/my-cards.html" class="nav-link px-2 text-body-secondary"
+          >My cards</a
+        >
+      </li>
+      <li class="nav-item">
+        <a href="/settings.html" class="nav-link px-2 text-body-secondary"
+          >Settings</a
+        >
+      </li>
+    </ul>
+  </footer>
+</div>
+
+  </body>
+</html>
