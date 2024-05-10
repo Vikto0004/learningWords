@@ -1,0 +1,9 @@
+.fs-4,
+.text-body-emphasis,
+.text-body-secondary {
+  color: #fff !important;
+}
+
+.row {
+  justify-content: space-around;
+}

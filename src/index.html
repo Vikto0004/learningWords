@@ -1,28 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Learning Words</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css"
-    />
-    <link rel="stylesheet" href="./css/styles.css" />
-  </head>
+  <load src="partials/head.html" />
   <body>
-    <load src="partials/titular.html" />
-    <load src="partials/model-create.html" />
-    <load src="partials/settings-opt-task.html" />
-    <load src="partials/task.html" />
+    <load src="partials/header.html" />
+    <div class="px-4 py-5 my-5 text-center">
+      <img
+        class="d-block mx-auto mb-4"
+        src="./img/letter-w.png"
+        alt=""
+        width="72"
+        height="57"
+      />
+      <h1 class="display-5 fw-bold text-body-emphasis">
+        Learn foreign words with WordMaster!
+      </h1>
+      <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">
+          Improve your language skills by creating your own flashcards and
+          learning new words in a fun way. Choose the learning mode that's right
+          for you and develop your language with WordMaster.
+        </p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+          <button type="button" class="btn btn-primary btn-lg px-4 gap-3">
+            Start studying
+          </button>
+          <button type="button" class="btn btn-outline-secondary btn-lg px-4">
+            Create the first card
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="container px-4 py-5" id="icon-grid">
+      <h2 class="pb-2 border-bottom">Why we are chosen?</h2>
+
+      <div
+        class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5"
+      >
+        <div class="col d-flex align-items-start">
+          <div>
+            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">
+              Personalized learning
+            </h3>
+            <p>
+              Your site allows users to create their own flashcards with foreign
+              words, making learning more personalized. Everyone has their own
+              unique learning methods, and the ability to create custom
+              flashcards allows users to learn according to their individual
+              needs and interests.
+            </p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <div>
+            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">
+              Flexibility of study modes
+            </h3>
+            <p>
+              Your site offers different study modes, such as choosing the
+              correct words, entering the correct words or combined mode. This
+              allows users to choose the learning method that best suits their
+              needs and preferences.
+            </p>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <div>
+            <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">
+              Ability to manage words
+            </h3>
+            <p>
+              Users can add, edit and delete words from their flashcards,
+              allowing them to effectively manage their vocabulary and tailor
+              learning to their needs and goals.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <load src="partials/footer.html" />
 
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
     <script type="module" src="./main.js"></script>
   </body>
 </html>
