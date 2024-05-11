@@ -187,3 +187,8 @@
   bottom: 0;
   right: 0;
 }
+
+.add-wrap-img-icon-not-active {
+  fill: #cac8c8;
+  pointer-events: none;
+}
