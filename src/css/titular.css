@@ -37,6 +37,37 @@
 .wrap-taskes {
   display: flex;
   flex-wrap: wrap;
-  gap: 35px;
+  gap: 40px;
   justify-content: center;
+  padding-top: 40px;
+}
+
+.modal-content {
+  width: 400px;
+  background-color: #2e3339;
+}
+
+.gap-4 p {
+  font-size: 20px;
+}
+
+.mt-5 {
+  margin-top: 0 !important;
+}
+
+.card-btn-delete {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 10px;
+  right: 5px;
+}
+
+.card-btn-delete svg {
+  transition: all 0.5s ease;
+  fill: #0d6efd;
+}
+
+.card-btn-delete:hover svg {
+  fill: #0d5bd0;
 }

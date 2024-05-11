@@ -6,30 +6,12 @@
   z-index: 999;
 }
 
-.model-create-close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  padding: 0;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: #d2382c 1px solid;
-  background: transparent;
-  color: #d2382c;
-  transition: all 0.5s ease;
-}
-
-.model-create-close:hover {
-  border: #f80000 1px solid;
-  color: #fa0909;
-}
-
 .model-create-form-number {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   margin-bottom: 30px;
-  gap: 20%;
+  row-gap: 25px;
 }
 
 .model-create-form-number label {
@@ -37,24 +19,9 @@
   font-size: 20px;
 }
 
-/* .model-create-form-number input {
-  border-radius: 8px;
-  background-color: #ededed;
-  padding: 5px 10px;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 117%;
-  letter-spacing: -0.02em;
-  color: #535356;
-  outline: transparent;
-  border: transparent 1.5px solid;
-  transition: border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+.input-group {
+  max-width: 400px;
 }
-
-.model-create-form-number input:hover,
-.model-create-form-number input:focus {
-  border-color: #d2382c;
-} */
 
 .model-create-wrap {
   display: flex;
@@ -69,6 +36,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 10%;
+  position: relative;
 }
 
 .model-create-list {
@@ -109,19 +77,11 @@
 
 .model-create-save {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
+  bottom: -15px;
+  right: 20px;
+  font-size: 20px;
   padding: 5px 10px;
-  border-radius: 5px;
-  border: #d2382c 1px solid;
-  background: #d2382c;
-  color: #000000;
   transition: all 0.5s ease;
-}
-
-.model-create-save:hover {
-  background: transparent;
-  color: #d2382c;
 }
 
 .task-container {
