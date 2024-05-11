@@ -1,45 +1,370 @@
-<div class="backgrop js-backgrop-model-create">
-  <div class="model-create-container">
-    <button class="model-create-close" type="button">X</button>
-    <form class="model-create-form-number">
-      <div>
-        <label for="titleTask">Title:</label>
-        <input type="text" name="titleTask" id="titleTask" />
-      </div>
-      <div>
-        <label for="wordCounter">Word counter:</label>
-        <input
-          type="number"
-          value="2"
-          min="2"
-          max="25"
-          name="wordCounter"
-          id="wordCounter"
-        />
-      </div>
-    </form>
-    <div class="model-create-wrap">
-      <p>English : Ukrain</p>
-      <p>English : Ukrain</p>
+<div class="container">
+  <button class="model-create-close" type="button">X</button>
+  <form class="model-create-form-number">
+    <div class="input-group input-group-lg">
+      <span class="input-group-text" id="inputGroup-sizing-lg">Title:</span>
+      <input
+        type="text"
+        class="form-control"
+        aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-lg"
+        name="titleTask"
+        id="titleTask"
+      />
     </div>
-    <form class="model-create-form">
-      <ul class="model-create-list">
-        <li>
-          <input type="text" name="engl" required /><input
-            type="text"
-            name="ukr"
-            required
-          />
-        </li>
-        <li>
-          <input type="text" name="engl" required /><input
-            type="text"
-            name="ukr"
-            required
-          />
-        </li>
-      </ul>
-      <button class="model-create-save" type="submit">Save</button>
-    </form>
-  </div>
+    <!-- <label for="titleTask">Title:</label>
+      <input type="text" name="titleTask" id="titleTask" /> -->
+    <div class="input-group input-group-lg">
+      <span class="input-group-text" id="inputGroup-sizing-lg"
+        >Word counter:</span
+      >
+      <input
+        type="number"
+        class="form-control"
+        aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-lg"
+        value="10"
+        min="10"
+        max="50"
+        name="wordCounter"
+        id="wordCounter"
+      />
+    </div>
+    <!-- <label for="wordCounter">Word counter:</label>
+    <input
+      type="number"
+      value="2"
+      min="2"
+      max="25"
+      name="wordCounter"
+      id="wordCounter"
+    /> -->
+  </form>
+  <!-- <div class="model-create-wrap">
+    <p>English : Ukrain</p>
+    <p>English : Ukrain</p>
+  </div> -->
+  <form class="model-create-form">
+    <div class="add-wrap-item">
+      <div class="add-wrap-img">
+        <img src="../img/letter-w.png" alt="" />
+        <button class="add-wrap-img-icon-left" type="button">
+          <svg width="30px" height="30px">
+            <use href="./img/sprite.svg#icon-arrow-left"></use>
+          </svg>
+        </button>
+        <button class="add-wrap-img-icon-right" type="button">
+          <svg width="30px" height="30px">
+            <use href="./img/sprite.svg#icon-arrow-right"></use>
+          </svg>
+        </button>
+      </div>
+      <input
+        type="text"
+        name="engl"
+        required
+        placeholder="Original"
+        class="form-control"
+        aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-lg"
+      /><input
+        type="text"
+        name="ukr"
+        required
+        placeholder="Translate"
+        class="form-control"
+        aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-lg"
+      />
+    </div>
+    <div class="add-wrap-item">
+      <div class="add-wrap-img">
+        <img src="../img/letter-w.png" alt="" />
+        <button class="add-wrap-img-icon-left" type="button">
+          <svg width="30px" height="30px">
+            <use href="./img/sprite.svg#icon-arrow-left"></use>
+          </svg>
+        </button>
+        <button class="add-wrap-img-icon-right" type="button">
+          <svg width="30px" height="30px">
+            <use href="./img/sprite.svg#icon-arrow-right"></use>
+          </svg>
+        </button>
+      </div>
+      <input
+        type="text"
+        name="engl"
+        required
+        placeholder="Original"
+        class="form-control"
+        aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-lg"
+      /><input
+        type="text"
+        name="ukr"
+        required
+        placeholder="Translate"
+        class="form-control"
+        aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-lg"
+      />
+    </div>
+    <div class="add-wrap-item">
+      <div class="add-wrap-img">
+        <img src="../img/letter-w.png" alt="" />
+        <button class="add-wrap-img-icon-left" type="button">
+          <svg width="30px" height="30px">
+            <use href="./img/sprite.svg#icon-arrow-left"></use>
+          </svg>
+        </button>
+        <button class="add-wrap-img-icon-right" type="button">
+          <svg width="30px" height="30px">
+            <use href="./img/sprite.svg#icon-arrow-right"></use>
+          </svg>
+        </button>
+      </div>
+      <input
+        type="text"
+        name="engl"
+        required
+        placeholder="Original"
+        class="form-control"
+        aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-lg"
+      /><input
+        type="text"
+        name="ukr"
+        required
+        placeholder="Translate"
+        class="form-control"
+        aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-lg"
+      />
+    </div>
+    <div class="add-wrap-item">
+      <div class="add-wrap-img">
+        <img src="../img/letter-w.png" alt="" />
+        <button class="add-wrap-img-icon-left" type="button">
+          <svg width="30px" height="30px">
+            <use href="./img/sprite.svg#icon-arrow-left"></use>
+          </svg>
+        </button>
+        <button class="add-wrap-img-icon-right" type="button">
+          <svg width="30px" height="30px">
+            <use href="./img/sprite.svg#icon-arrow-right"></use>
+          </svg>
+        </button>
+      </div>
+      <input
+        type="text"
+        name="engl"
+        required
+        placeholder="Original"
+        class="form-control"
+        aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-lg"
+      /><input
+        type="text"
+        name="ukr"
+        required
+        placeholder="Translate"
+        class="form-control"
+        aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-lg"
+      />
+    </div>
+    <div class="add-wrap-item">
+      <div class="add-wrap-img">
+        <img src="../img/letter-w.png" alt="" />
+        <button class="add-wrap-img-icon-left" type="button">
+          <svg width="30px" height="30px">
+            <use href="./img/sprite.svg#icon-arrow-left"></use>
+          </svg>
+        </button>
+        <button class="add-wrap-img-icon-right" type="button">
+          <svg width="30px" height="30px">
+            <use href="./img/sprite.svg#icon-arrow-right"></use>
+          </svg>
+        </button>
+      </div>
+      <input
+        type="text"
+        name="engl"
+        required
+        placeholder="Original"
+        class="form-control"
+        aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-lg"
+      /><input
+        type="text"
+        name="ukr"
+        required
+        placeholder="Translate"
+        class="form-control"
+        aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-lg"
+      />
+    </div>
+    <div class="add-wrap-item">
+      <div class="add-wrap-img">
+        <img src="../img/letter-w.png" alt="" />
+        <button class="add-wrap-img-icon-left" type="button">
+          <svg width="30px" height="30px">
+            <use href="./img/sprite.svg#icon-arrow-left"></use>
+          </svg>
+        </button>
+        <button class="add-wrap-img-icon-right" type="button">
+          <svg width="30px" height="30px">
+            <use href="./img/sprite.svg#icon-arrow-right"></use>
+          </svg>
+        </button>
+      </div>
+      <input
+        type="text"
+        name="engl"
+        required
+        placeholder="Original"
+        class="form-control"
+        aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-lg"
+      /><input
+        type="text"
+        name="ukr"
+        required
+        placeholder="Translate"
+        class="form-control"
+        aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-lg"
+      />
+    </div>
+    <div class="add-wrap-item">
+      <div class="add-wrap-img">
+        <img src="../img/letter-w.png" alt="" />
+        <button class="add-wrap-img-icon-left" type="button">
+          <svg width="30px" height="30px">
+            <use href="./img/sprite.svg#icon-arrow-left"></use>
+          </svg>
+        </button>
+        <button class="add-wrap-img-icon-right" type="button">
+          <svg width="30px" height="30px">
+            <use href="./img/sprite.svg#icon-arrow-right"></use>
+          </svg>
+        </button>
+      </div>
+      <input
+        type="text"
+        name="engl"
+        required
+        placeholder="Original"
+        class="form-control"
+        aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-lg"
+      /><input
+        type="text"
+        name="ukr"
+        required
+        placeholder="Translate"
+        class="form-control"
+        aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-lg"
+      />
+    </div>
+    <div class="add-wrap-item">
+      <div class="add-wrap-img">
+        <img src="../img/letter-w.png" alt="" />
+        <button class="add-wrap-img-icon-left" type="button">
+          <svg width="30px" height="30px">
+            <use href="./img/sprite.svg#icon-arrow-left"></use>
+          </svg>
+        </button>
+        <button class="add-wrap-img-icon-right" type="button">
+          <svg width="30px" height="30px">
+            <use href="./img/sprite.svg#icon-arrow-right"></use>
+          </svg>
+        </button>
+      </div>
+      <input
+        type="text"
+        name="engl"
+        required
+        placeholder="Original"
+        class="form-control"
+        aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-lg"
+      /><input
+        type="text"
+        name="ukr"
+        required
+        placeholder="Translate"
+        class="form-control"
+        aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-lg"
+      />
+    </div>
+    <div class="add-wrap-item">
+      <div class="add-wrap-img">
+        <img src="../img/letter-w.png" alt="" />
+        <button class="add-wrap-img-icon-left" type="button">
+          <svg width="30px" height="30px">
+            <use href="./img/sprite.svg#icon-arrow-left"></use>
+          </svg>
+        </button>
+        <button class="add-wrap-img-icon-right" type="button">
+          <svg width="30px" height="30px">
+            <use href="./img/sprite.svg#icon-arrow-right"></use>
+          </svg>
+        </button>
+      </div>
+      <input
+        type="text"
+        name="engl"
+        required
+        placeholder="Original"
+        class="form-control"
+        aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-lg"
+      /><input
+        type="text"
+        name="ukr"
+        required
+        placeholder="Translate"
+        class="form-control"
+        aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-lg"
+      />
+    </div>
+    <div class="add-wrap-item">
+      <div class="add-wrap-img">
+        <img src="../img/letter-w.png" alt="" />
+        <button class="add-wrap-img-icon-left" type="button">
+          <svg width="30px" height="30px">
+            <use href="./img/sprite.svg#icon-arrow-left"></use>
+          </svg>
+        </button>
+        <button class="add-wrap-img-icon-right" type="button">
+          <svg width="30px" height="30px">
+            <use href="./img/sprite.svg#icon-arrow-right"></use>
+          </svg>
+        </button>
+      </div>
+      <input
+        type="text"
+        name="engl"
+        required
+        placeholder="Original"
+        class="form-control"
+        aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-lg"
+      /><input
+        type="text"
+        name="ukr"
+        required
+        placeholder="Translate"
+        class="form-control"
+        aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-lg"
+      />
+    </div>
+    <button class="model-create-save" type="submit">Save</button>
+  </form>
 </div>

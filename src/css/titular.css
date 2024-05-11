@@ -1,7 +1,16 @@
 .wrap-title {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 45px;
+  margin: 150px;
+  height: auto;
+}
+
+.wrap-title h1 {
+  color: #ffff;
+}
+
+.wrap-title-link {
+  color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
 }
 
 .btn-create {
@@ -19,10 +28,6 @@
 .btn-create:hover {
   border: #fa0909 1px solid;
   color: #fa0909;
-}
-
-.title {
-  color: #ffff;
 }
 
 .title span {
