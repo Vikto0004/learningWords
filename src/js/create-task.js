@@ -51,6 +51,7 @@ elCardFormToAdd.elements.wordCounter.addEventListener('input', e => {
       message: 'Minimum 10 words',
       position: 'topRight',
     });
+    e.target.value = 10;
     return;
   }
   if (numberItems < 0) {

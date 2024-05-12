@@ -36,3 +36,42 @@ export const markupAddCard = number => {
   }
   return nurkup;
 };
+
+export const markupGetCards = arrCardSave => {
+  return arrCardSave
+    .map(({ title, number, progress, time }) => {
+      return ` <div class="modal-content rounded-4 shadow">
+      <div class="modal-body p-5">
+        <button class="card-btn-delete" type="button">
+          <svg width="30px" height="25px">
+            <use href="./img/sprite.svg#icon-delete"></use>
+          </svg>
+        </button>
+        <h2 class="fw-bold mb-0">${title}</h2>
+
+        <ul class="d-grid gap-4 my-5 list-unstyled small">
+          <li class="d-flex gap-4">
+            <h5 class="mb-0">Word count:</h5>
+            <p>${number}</p>
+          </li>
+          <li class="d-flex gap-4">
+            <h5 class="mb-0">Progress:</h5>
+            <p>${progress}</p>
+          </li>
+          <li class="d-flex gap-4">
+            <h5 class="mb-0">Execution time:</h5>
+            <p>${time} min</p>
+          </li>
+        </ul>
+        <button
+          type="button"
+          class="btn btn-lg btn-primary mt-5 w-100"
+          data-bs-dismiss="modal"
+        >
+          Start!
+        </button>
+      </div>
+    </div>`;
+    })
+    .join('');
+};

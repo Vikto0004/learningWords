@@ -1,9 +1,8 @@
 .wrap-title {
-  display: flex;
   justify-content: space-around;
-
   height: auto;
   display: none;
+  margin: 100px 0;
 }
 
 .wrap-title h1 {
