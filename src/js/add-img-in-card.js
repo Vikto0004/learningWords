@@ -2,22 +2,24 @@ import { promiseWordSearch } from './pixabay-api';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
-const elWrapItem = document.querySelectorAll('.add-wrap-item');
+export function resetElWrapItem() {
+  const elWrapItem = document.querySelectorAll('.add-wrap-item');
+  elWrapItem.forEach(el => {
+    let index = 0;
 
-elWrapItem.forEach(el => {
-  let index = 0;
+    el.addEventListener('click', e => {
+      const elBtnLeft = e.target.closest('.add-wrap-img-icon-left');
+      const elBtnRight = e.target.closest('.add-wrap-img-icon-right');
 
-  el.addEventListener('click', e => {
-    const elBtnLeft = e.target.closest('.add-wrap-img-icon-left');
-    const elBtnRight = e.target.closest('.add-wrap-img-icon-right');
-
-    if (elBtnRight) {
-      valueInpForSearchImg(e, ++index);
-    } else if (elBtnLeft) {
-      valueInpForSearchImg(e, --index);
-    }
+      if (elBtnRight) {
+        valueInpForSearchImg(e, ++index);
+      } else if (elBtnLeft) {
+        valueInpForSearchImg(e, --index);
+      }
+    });
   });
-});
+}
+resetElWrapItem();
 
 export function valueInpForSearchImg(e, index) {
   const elAddWrap = e.target.closest('.add-wrap-item');
