@@ -184,3 +184,8 @@
 .fw-bold {
   font-size: 38px;
 }
+
+.not-active {
+  pointer-events: none;
+  background-color: #cbcbcb;
+}

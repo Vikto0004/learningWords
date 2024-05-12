@@ -58,35 +58,28 @@
                   class="form-check-input"
                   type="radio"
                   name="mode"
-                  id="flexRadioDefault1"
+                  id="Choose"
+                  checked
                 />
-                <label class="form-check-label" for="flexRadioDefault1">
-                  Choose
-                </label>
+                <label class="form-check-label" for="Choose"> Choose </label>
               </div>
               <div class="form-check">
                 <input
                   class="form-check-input"
                   type="radio"
                   name="mode"
-                  id="flexRadioDefault2"
-                  checked
+                  id="Enter"
                 />
-                <label class="form-check-label" for="flexRadioDefault2">
-                  Enter
-                </label>
+                <label class="form-check-label" for="Enter"> Enter </label>
               </div>
               <div class="form-check">
                 <input
                   class="form-check-input"
                   type="radio"
                   name="mode"
-                  id="flexRadioDefault3"
-                  checked
+                  id="Mixed"
                 />
-                <label class="form-check-label" for="flexRadioDefault3">
-                  Mixed
-                </label>
+                <label class="form-check-label" for="Mixed"> Mixed </label>
               </div>
             </div>
           </li>
@@ -98,10 +91,11 @@
                   class="form-check-input"
                   type="radio"
                   name="language"
-                  id="flexRadioDefault4"
+                  id="Original"
+                  checked
                 />
-                <label class="form-check-label" for="flexRadioDefault4">
-                  Orinal
+                <label class="form-check-label" for="Original">
+                  Original
                 </label>
               </div>
               <div class="form-check">
@@ -109,10 +103,9 @@
                   class="form-check-input"
                   type="radio"
                   name="language"
-                  id="flexRadioDefault5"
-                  checked
+                  id="Translate"
                 />
-                <label class="form-check-label" for="flexRadioDefault5">
+                <label class="form-check-label" for="Translate">
                   Translate
                 </label>
               </div>
@@ -121,14 +114,13 @@
           <li class="d-flex gap-4">
             <div class="form-check form-switch">
               <input
-                class="form-check-input"
+                class="checked-time form-check-input"
                 type="checkbox"
                 role="switch"
-                id="flexSwitchCheckDefault"
+                name="time"
+                id="time"
               />
-              <label class="form-check-label" for="flexSwitchCheckDefault"
-                >Time</label
-              >
+              <label class="form-check-label" for="time">Time</label>
             </div>
             <div class="time-wrap">
               <div class="input-group mb-3">
@@ -137,7 +129,9 @@
                 >
                 <input
                   type="number"
-                  class="form-control"
+                  min="0"
+                  value="0"
+                  class="form-control time-minute not-active"
                   aria-label="Sizing example input"
                   aria-describedby="inputGroup-sizing-default"
                 />
@@ -148,7 +142,10 @@
                 >
                 <input
                   type="number"
-                  class="form-control"
+                  min="0"
+                  max="60"
+                  value="0"
+                  class="form-control time-seconds not-active"
                   aria-label="Sizing example input"
                   aria-describedby="inputGroup-sizing-default"
                 />
@@ -158,7 +155,7 @@
         </ul>
         <button
           type="button"
-          class="btn btn-lg btn-primary mt-5 w-100"
+          class="save-settings btn btn-lg btn-primary mt-5 w-100"
           data-bs-dismiss="modal"
         >
           Save
