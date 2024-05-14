@@ -9,7 +9,7 @@ const elCardFormToAdd = document.querySelector('.model-create-form');
 const cardSave = {
   title: 'Title',
   number: '00',
-  progress: '00 / 00',
+  progress: '00',
   time: '00.00',
   Original: [],
   Translate: [],

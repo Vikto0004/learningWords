@@ -56,7 +56,7 @@ export const markupGetCards = arrCardSave => {
           </li>
           <li class="d-flex gap-4">
             <h5 class="mb-0">Progress:</h5>
-            <p>${progress}</p>
+            <p>${progress} / ${number}</p>
           </li>
           <li class="d-flex gap-4">
             <h5 class="mb-0">Execution time:</h5>
